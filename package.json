@@ -1,0 +1,54 @@
+{
+    "name": "portfolio",
+    "private": true,
+    "author": "Tom Atanasov (Xen)",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "lint:eslint": "eslint \"src/**/*.{js,ts,vue}\"",
+        "lint:eslint:fix": "eslint --fix \"src/**/*.{js,ts,vue}\"",
+        "lint:prettier": "prettier --check \"src/**/*.{js,json,ts,vue}\"",
+        "lint:prettier:fix": "prettier --write \"src/**/*.{js,json,ts,vue}\"",
+        "lint:stylelint": "stylelint \"src/**/*.{css,scss}\"",
+        "lint:stylelint:fix": "stylelint \"src/**/*.{css,scss}\" --fix"
+    },
+    "dependencies": {
+        "vue": "^3.2.37"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^3.0.3",
+        "@vue/eslint-config-prettier": "^7.0.0",
+        "eslint": "^8.23.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-vue": "^9.4.0",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
+        "prettier": "^2.7.1",
+        "sass": "^1.54.6",
+        "stylelint": "^14.11.0",
+        "stylelint-config-recommended": "^9.0.0",
+        "stylelint-config-standard": "^28.0.0",
+        "stylelint-config-standard-scss": "^5.0.0",
+        "stylelint-order": "^5.0.0",
+        "vite": "^3.0.9",
+        "vite-plugin-eslint": "^1.8.1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "post-commit": "git update-index --again"
+        }
+    },
+    "lint-staged": {
+        "**/*.{js,vue}": [
+            "npm run lint:eslint:fix",
+            "npm run lint:prettier:fix"
+        ],
+        "**/*.{css,scss}": [
+            "npm run lint:stylelint:fix"
+        ]
+    }
+}

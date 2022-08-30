@@ -1,0 +1,267 @@
+html,
+body {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: $neutral-900;
+}
+
+body {
+    @include font-size(16px);
+
+    color: $white;
+    font-weight: 400;
+    font-family: $font-base;
+    line-height: 1;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 400;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+pre {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-homepage {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: $font-base;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 50px;
+    }
+
+    .container {
+        padding: 50px 0 50px 50px;
+    }
+
+    picture {
+        display: flex;
+        flex: 0 0 338px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 338px;
+        border-radius: 20px;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    h1 {
+        @include font-size(90px);
+
+        padding: 0 0 20px;
+        font-weight: 700;
+
+        span {
+            background: linear-gradient(to right, $amber-300 0%, $amber-400 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    p {
+        @include font-size(24px);
+
+        padding: 20px 0 0;
+        line-height: 1.4;
+
+        &:first-child {
+            padding: 0;
+        }
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        padding: 20px 0 0;
+    }
+
+    li {
+        @include font-size(20px);
+
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 15px;
+
+        &::before {
+            content: '/';
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            padding: 0 15px 0 0;
+            color: $neutral-700;
+            font-weight: 700;
+            transform: translateX(-50);
+        }
+
+        &:first-child {
+            padding: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 0 0 15px;
+            color: $amber-300;
+            font-weight: 700;
+            transition: color 200ms linear;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@include screen-sm {
+    .page-homepage {
+        padding: 40px;
+
+        .wrapper {
+            padding: 0;
+            border: 0;
+        }
+
+        .container {
+            padding: 0;
+        }
+
+        picture {
+            display: none;
+        }
+
+        h1,
+        p {
+            text-align: center;
+        }
+
+        h1 {
+            @include font-size(70px);
+
+            padding: 0 0 10px;
+            line-height: 1.4;
+        }
+
+        p {
+            @include font-size(20px);
+        }
+
+        ul {
+            justify-content: center;
+        }
+
+        li {
+            @include font-size(18px);
+
+            a {
+                margin: 0 0 0 10px;
+            }
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+@include screen-xs {
+    .page-homepage {
+        padding: xs(40px);
+
+        h1 {
+            padding: 0 0 xs(10px);
+            font-size: xs(50px);
+        }
+
+        p {
+            font-size: xs(22px);
+        }
+
+        ul {
+            flex-direction: column;
+            padding: xs(5px) 0 0 0;
+        }
+
+        li {
+            padding: xs(15px) 0 0 0;
+            font-size: xs(18px);
+
+            &::before {
+                display: none;
+            }
+
+            &:first-child {
+                padding: xs(15px) 0 0 0;
+            }
+
+            a {
+                margin: 0 0 0 xs(10px);
+            }
+        }
+
+        svg {
+            width: xs(24px);
+            height: xs(24px);
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Reaver';
+    src: url('/fonts/Reaver/Reaver-Regular.eot');
+    src:
+        url('/fonts/Reaver/Reaver-Regular.eot#iefix') format('embedded-opentype'),
+        url('/fonts/Reaver/Reaver-Regular.woff2') format('woff2'),
+        url('/fonts/Reaver/Reaver-Regular.woff') format('woff'),
+        url('/fonts/Reaver/Reaver-Regular.ttf') format('truetype'),
+        url('/fonts/Reaver/Reaver-Regular.svg#Reaver-Regular') format('svg');
+    font-display: swap;
+}
+
+@font-face {
+    font-weight: 700;
+    font-style: normal;
+    font-family: 'Reaver';
+    src: url('/fonts/Reaver/Reaver-Bold.eot');
+    src:
+        url('/fonts/Reaver/Reaver-Bold.eot#iefix') format('embedded-opentype'),
+        url('/fonts/Reaver/Reaver-Bold.woff2') format('woff2'),
+        url('/fonts/Reaver/Reaver-Bold.woff') format('woff'),
+        url('/fonts/Reaver/Reaver-Bold.ttf') format('truetype'),
+        url('/fonts/Reaver/Reaver-Bold.svg#Reaver-Bold') format('svg');
+    font-display: swap;
+}
